@@ -1,0 +1,27 @@
+{
+  "name": "checkbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "docker-compose up",
+    "dev-build": "docker-compose build --no-cache",
+    "test": "jest",
+    "web": "nodemon -r dotenv/config src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "peterjs": "^1.0.0",
+    "postgres": "^1.0.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "dotenv": "^9.0.2",
+    "jest": "^26.6.3",
+    "supertest": "^6.1.3"
+  }
+}

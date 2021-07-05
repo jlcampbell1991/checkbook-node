@@ -1,0 +1,6 @@
+<h1>Hi there</h1>
+<% resources.forEach(resource => { %>
+    <% if(resource.schema && resource.schema.columns) resource.schema.columns.forEach(column => { %>
+        <div><%= `${column.name}: ${resource[column.name]}` %></div>
+    <% }) %>
+<% })

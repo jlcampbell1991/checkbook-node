@@ -1,0 +1,15 @@
+<h1><%= resources[0].schema.resourceName.plural %></h1>
+<table>
+    <tr>
+        <% resources[0].schema.columns.forEach(column => { %>
+            <td><%= column.name %> </td>
+        <% }) %>
+    </tr>
+<% resources.forEach(resource => { %>
+    <tr>
+        <% if(resource.schema && resource.schema.columns) resource.schema.columns.forEach(column => { %>
+            <td><%= resource[column.name] %></td>
+        <% }) %>
+    </tr>
+<% }) %>
+</table>
